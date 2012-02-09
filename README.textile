@@ -1,4 +1,5 @@
 h1. Purpose
+
 This repo is mostly just for me, to store the plugins and modes I use with "Coda":http://www.panic.com/coda/ . In order to more easily create this repo, I slipped in a few modes found in other repos, noted below.
 
 h2. Modes include:
@@ -39,4 +40,66 @@ A plugin I made (scripted in ruby) to provide some useful tools for myself. Incl
 
 h4. Balancer
 
-<kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>c</kbd>
+keyboard shortcut <kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>C</kbd>
+
+Balance code variable assignments & arrays so they are more readable. For example:
+
+<pre><code>
+name = "John"
+occupation = "Programmer"
+color = "Blue"
+</code></pre>
+
+would become
+
+<pre><code>
+name       = "John"
+occupation = "Programmer"
+color      = "Blue"
+</code></pre>
+
+Also works on arrays, so:
+
+<pre><code>
+array("name" => "John"
+      "occupation" => "Programmer"
+      "color" => "Blue");
+</code></pre>
+
+becomes
+
+<pre><code>
+array("name"       => "John"
+      "occupation" => "Programmer"
+      "color"      => "Blue");
+</code></pre>
+
+
+h4. CSS Toggler
+
+keyboard shortcut <kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>Spacebar</kbd>
+
+Toggle CSS declaration formatting back and forth between one-line to multi-line. It works with multiple declarations highlighted at once, and will toggle the declarations independently between single and multiple line, depending on their current state. A bit experimental, but it does work well.
+
+<pre>
+.labeling { color: #aaa; text-align: right; font-weight: normal; }
+a.button 
+{
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+</pre>
+
+becomes
+
+<pre>
+.labeling
+{
+    color: #aaa;
+    text-align: right;
+    font-weight: normal;
+}
+a.button { line-height: 25px; text-align: center; text-decoration: none; }
+</pre>
+
