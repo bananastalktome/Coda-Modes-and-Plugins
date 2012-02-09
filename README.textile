@@ -6,19 +6,19 @@ h2. Modes include:
 
 h3. ApacheConf.mode
 
-A user contributed mode from the "SubethaEdit Modes Website":http://www.codingmonkeys.de/subethaedit/modes.html
+A user contributed mode from the "SubEthaEdit Modes Website":http://www.codingmonkeys.de/subethaedit/modes.html
 
 h3. bash.mode
 
-Can't remember where I found this, but drop me a line if you are the original creator and I will include mention here.
+Can't remember where I found this, but drop me a line if you are the original creator and I will include mention here. It has been modified from it's original version.
 
 h3. CoffeeScript.mode
 
-Originally from https://github.com/nfiniteset/CoffeeScript.mode
+Originally from "https://github.com/nfiniteset/CoffeeScript.mode":https://github.com/nfiniteset/CoffeeScript.mode
 
 h3. HAML.mode
 
-Originally from https://github.com/gf3/haml.mode
+Originally from "https://github.com/gf3/haml.mode":https://github.com/gf3/haml.mode , with an attempt (mostly failed) by me to improve multiline syntax highlighting
 
 h3. properties.mode
 
@@ -26,17 +26,17 @@ I created this mode to provide absolute basic syntax highlighting for .propertie
 
 h3. SASS.mode
 
-Originally from https://github.com/brajeshwar/Sass.mode
+Originally from "https://github.com/brajeshwar/Sass.mode":https://github.com/brajeshwar/Sass.mode
 
 h3. YAML.mode
 
-Originally from https://github.com/stuffmc/YAML.mode
+Originally from "https://github.com/stuffmc/YAML.mode":https://github.com/stuffmc/YAML.mode
 
 h2. Plugins include:
 
 h3. UsefulTools
 
-A plugin I made (scripted in ruby) to provide some useful tools for myself. Included commands are:
+A plugin I made with a collection of commands (scripted in ruby) to provide some useful functionality. Included commands are:
 
 h4. Balancer
 
@@ -74,7 +74,6 @@ array("name"       => "John"
       "color"      => "Blue");
 </code></pre>
 
-
 h4. CSS Toggler
 
 keyboard shortcut <kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>Spacebar</kbd>
@@ -103,3 +102,6 @@ becomes
 a.button { line-height: 25px; text-align: center; text-decoration: none; }
 </pre>
 
+h1. More
+
+I am gracious to the original creators of these modes, and am mostly just using this repo as a simple place to store my ~/Library/Application Support/Coda directory with regard to Modes and Plugins. That said, the modes which I have indicated were created by others fall under any copyright/license/blood pact placed on them by their original author(s).
