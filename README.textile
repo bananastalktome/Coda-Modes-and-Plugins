@@ -76,7 +76,7 @@ array("name"       => "John"
 
 h4. CSS Toggler
 
-keyboard shortcut <kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>Spacebar</kbd>
+keyboard shortcut <kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>spacebar</kbd>
 
 Toggle CSS declaration formatting back and forth between one-line to multi-line. It works with multiple declarations highlighted at once, and will toggle the declarations independently between single and multiple line, depending on their current state. A bit experimental, but it does work well.
 
@@ -104,4 +104,4 @@ a.button { line-height: 25px; text-align: center; text-decoration: none; }
 
 h1. More
 
-I am gracious to the original creators of these modes, and am mostly just using this repo as a simple place to store my ~/Library/Application Support/Coda directory with regard to Modes and Plugins. That said, the modes which I have indicated were created by others fall under any copyright/license/blood pact placed on them by their original author(s).
+I am gracious to the original creators of these modes, and am mostly just using this repo as a simple place to store the modes & plugins in my <pre>~/Library/Application Support/Coda</pre> directory. That said, the modes which I have indicated were created by others fall under any copyright/license/blood pact placed on them by their original author(s).
