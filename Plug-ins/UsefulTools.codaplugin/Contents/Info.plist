@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>CodaScriptPlugIn</string>
+	<key>CFBundleIconFile</key>
+	<string>plug-in</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.panic.CodaScriptPlugIn</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.1</string>
+	<key>CodaPlugInMinimumAPIVersion</key>
+	<string>3</string>
+	<key>NSPrincipalClass</key>
+	<string>CodaScriptPlugIn</string>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>fallbackInput</key>
+			<string>none</string>
+			<key>input</key>
+			<string>none</string>
+			<key>keyEquivalent</key>
+			<string>~^@c</string>
+			<key>keyEquivalentConflict</key>
+			<false/>
+			<key>name</key>
+			<string>Balancer</string>
+			<key>output</key>
+			<string>replaceSelectedText</string>
+			<key>script</key>
+			<string>balancer.rb</string>
+			<key>uuid</key>
+			<string>0EECA491-5BBB-4B14-B5D5-B15626AC5B05</string>
+		</dict>
+		<dict>
+			<key>fallbackInput</key>
+			<string>none</string>
+			<key>input</key>
+			<string>selection</string>
+			<key>keyEquivalent</key>
+			<string>~^@ </string>
+			<key>keyEquivalentConflict</key>
+			<false/>
+			<key>name</key>
+			<string>CSS Toggler</string>
+			<key>output</key>
+			<string>replaceSelectedText</string>
+			<key>postprocess</key>
+			<string>none</string>
+			<key>preprocess</key>
+			<string>none</string>
+			<key>script</key>
+			<string>toggle.rb</string>
+			<key>uuid</key>
+			<string>00048678-DF1B-4375-99EA-88BEF800A24A</string>
+		</dict>
+	</array>
+</dict>
+</plist>

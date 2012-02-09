@@ -1,0 +1,6 @@
+Logs/**/*
+Books/**/*
+Site\ Previews/**/*
+SubEthaEditHelperTool
+*.db
+.DS_Store
