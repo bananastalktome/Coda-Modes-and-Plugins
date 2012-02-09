@@ -1,0 +1,42 @@
+h1. Purpose
+This repo is mostly just for me, to store the plugins and modes I use with "Coda":http://www.panic.com/coda/ . In order to more easily create this repo, I slipped in a few modes found in other repos, noted below.
+
+h2. Modes include:
+
+h3. ApacheConf.mode
+
+A user contributed mode from the "SubethaEdit Modes Website":http://www.codingmonkeys.de/subethaedit/modes.html
+
+h3. bash.mode
+
+Can't remember where I found this, but drop me a line if you are the original creator and I will include mention here.
+
+h3. CoffeeScript.mode
+
+Originally from https://github.com/nfiniteset/CoffeeScript.mode
+
+h3. HAML.mode
+
+Originally from https://github.com/gf3/haml.mode
+
+h3. properties.mode
+
+I created this mode to provide absolute basic syntax highlighting for .properties files (mostly just comments, boolean true|false, and numbers)
+
+h3. SASS.mode
+
+Originally from https://github.com/brajeshwar/Sass.mode
+
+h3. YAML.mode
+
+Originally from https://github.com/stuffmc/YAML.mode
+
+h2. Plugins include:
+
+h3. UsefulTools
+
+A plugin I made (scripted in ruby) to provide some useful tools for myself. Included commands are:
+
+h4. Balancer
+
+<kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>c</kbd>
