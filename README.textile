@@ -38,7 +38,7 @@ h3. UsefulTools
 
 A plugin I made with a collection of commands (scripted in ruby) to provide some useful functionality. Included commands are:
 
-h4. Balancer
+h6. Balancer
 
 keyboard shortcut <kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>C</kbd>
 
@@ -74,7 +74,7 @@ array("name"       => "John"
       "color"      => "Blue");
 </code></pre>
 
-h4. CSS Toggler
+h6. CSS Toggler
 
 keyboard shortcut <kbd>control</kbd> + <kbd>option</kbd> + <kbd>command</kbd> + <kbd>spacebar</kbd>
 
