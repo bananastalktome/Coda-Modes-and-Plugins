@@ -4,6 +4,6 @@
   <recognition>
     <extension>yml</extension>                   <!-- Add file extensions -->
     <extension>yaml</extension>
-    <extension casesensitive="yes">C</extension> <!-- Add case sensitive file extensions -->
+    <!-- <extension casesensitive="yes">C</extension> Add case sensitive file extensions -->
   </recognition>
 </settings>
