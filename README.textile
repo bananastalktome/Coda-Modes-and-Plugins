@@ -1,0 +1,23 @@
+h1. Purpose
+
+This repo is mostly just for me, updated in Master branch for Coda2, to store the plugins, modes, and styles I use with "Coda":http://www.panic.com/coda/ . In order to more easily create this repo, I slipped in a few modes found in other repos, noted below.
+
+h2. Modes include:
+
+h3. ApacheConf.mode
+
+A user contributed mode from the "SubEthaEdit Modes Website":http://www.codingmonkeys.de/subethaedit/modes.html
+
+h3. HAML.mode
+
+Originally from "https://github.com/gf3/haml.mode":https://github.com/gf3/haml.mode , with improved multiline syntax highlighting (including comments)
+
+h2. Styles:
+
+h3. Railscasts Custom.sss
+
+Modified from "http://ipaintcode.com/coda-2-themes/":http://ipaintcode.com/coda-2-themes/ with colors tweaked slightly
+
+h1. More
+
+I am gracious to the original creators of these modes, and am mostly just using this repo as a simple place to store the modes & plugins in my <code>~/Library/Application Support/Coda</code> directory. That said, the modes which I have indicated that were created by others fall under any copyright/license/blood pact placed on them by their original author(s).
