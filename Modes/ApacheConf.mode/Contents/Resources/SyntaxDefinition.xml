@@ -9,9 +9,8 @@
     </head>
 
     <states>
-    
-        <default id="Base" color="#000" background-color="#fff" font-weight="normal" font-style="normal">
-            <keywords id="Keywords" color="#008" useforautocomplete="yes">
+        <default id="Base" scope="meta.default">
+            <keywords id="Keywords" useforautocomplete="yes" scope="keyword">
 				<!-- New for Apache 2.2: -->
 				<string>AcceptFilter</string>
 				<string>AuthBasicAuthoritative</string>
@@ -374,7 +373,6 @@
 				<string>RemoveType</string>
 				<string>RequestHeader</string>
 				<string>Require</string>
-                		<string>require</string>
 				<string>ResourceConfig</string>
 				<string>RewriteBase</string>
 				<string>RewriteCond</string>
@@ -471,7 +469,6 @@
 				<string>Win32DisableAcceptEx</string>
 				<string>XBitHack</string>
 		
-		
 				<!-- Extra directives: -->
 				<string>php_value</string>
 				<string>php_flag</string>
@@ -494,9 +491,9 @@
                 <string>ShibUseHeaders</string>
                 <string>WebAuthEnabled</string>
                 <string>WebAuthPassAttrs</string>
-
             </keywords>
-            <keywords id="Block directives" color="#007F66" useforautocomplete="no">
+            
+            <!--<keywords id="Block directives" useforautocomplete="no" scope="markup.tag">
 				<regex>(&lt;/?Directory[^&gt;]*&gt;)</regex>
 				<regex>(&lt;/?IfModule[^&gt;]*&gt;)</regex>
 				<regex>(&lt;/?DirectoryMatch[^&gt;]*&gt;)</regex>
@@ -508,13 +505,70 @@
 				<regex>(&lt;/?Location[^&gt;]*&gt;)</regex>
 				<regex>(&lt;/?LocationMatch[^&gt;]*&gt;)</regex>
 				<regex>(&lt;/?VirtualHost[^&gt;]*&gt;)</regex>
-            </keywords>
+            </keywords>-->
+            
+            <!--<state id="Block Directives" useforautocomplete="no" foldable="yes" scope="meta.default">
+                <begin>
+                    <regex>&lt;\s*(?'apacheblocktype'(?:Directory|IfModule|DirectoryMatch|Files|FilesMatch|IfDefine|Limit|LimitException|Location|LocationMatch|VirtualHost))[^>]*></regex>
+                </begin>
+                <end>
+                    <regex>&lt;\s*/\s*(?#see-insert-start-group:apacheblocktype)\s*></regex>
+                </end>
+                                
+                <keywords id="Block Directive Tags" scope="markup.tag">
+                    <regex>(&lt;\s*[\/]?\s*(?:Directory|IfModule|DirectoryMatch|Files|FilesMatch|IfDefine|Limit|LimitException|Location|LocationMatch|VirtualHost))(?=[^>]*>)</regex>
+
+                </keywords>
+                
+                <import />
+            </state>-->
+            
+            <keywords id="Tags" useforautocomplete="no" scope="markup.tag">
+				<regex>(&lt;[/\s*]*>)</regex> <!-- CODA -->
+                <regex>(&lt;[/\s]*[^/?!][-:_\w\.]*\s*(?:[-:_\w\~]+[ \t]*=?[ \t]*(?:".*?"|'.*?'|[-\w\.:%+#]+)\s*)*[/\s\w\.-]*(?:[>&lt;]|$))</regex>
+                <regex>(&lt;[^>&lt;?!]*$)</regex>
+			</keywords>
+			
+			<keywords id="Attributes in Tags" useforautocomplete="no" scope="markup.tag.attribute.name">
+                <regex>([\w-]*)(?=[ \t]*=?[^&lt;]+(?:[>&lt;]|$))</regex>
+			</keywords>
+
+            <state id="Single Tag" foldable="yes" useforautocomplete="no" scope="markup.tag">
+				<begin>
+					<regex>&lt;\s*[^/?!][-:_\w]*\s*(?:[-:_\w\.]+\s*[=]{0,1}\s*(?:"[^"]*"|'[^']*'|\w+)\s*)*/\s*(?=>)</regex>
+				</begin>
+				<end>
+					<regex>></regex>
+				</end>
+                
+
+				<import />
+			</state>
+            <!--<state id="Regexp Tag" scope="string.regex">
+                <begin><regex>[\~][ ]+(?:"|')</regex></begin>
+                <end><regex>(?:"|')</regex></end>
+            </state>-->
+			<state id="Tag State" foldable="yes" indent="yes" useforautocomplete="no" scope="meta.default">
+				<begin>					                  
+					<regex>&lt;\s*(?'apacheblocktype'[^/?!][-:_\w]*)\s*(?:[-:_\w\.\~]+[=]{0,1}[ ]*(?:"[^"]*"|'[^']*'|\w+)\s*)*\s*>(?'cutoffstart'(?:.|[\n])*&lt;/\k'apacheblocktype')</regex>
+					<autoend>&lt;/\g&lt;apacheblocktype>></autoend>
+				</begin>
+				<end>
+					<regex>&lt;\s*/\s*(?#see-insert-start-group:apacheblocktype)\s*></regex>
+				</end>
+                <import />
+			</state>
+            
+            <!--<keywords id="Constant Keywords" useforautocomplete="no" scope="constant.numeric.keyword">
+                <regex>((?i)Yes)</regex>
+            </keywords>-->
+            
+            <state id="Singleline Comment" scope="comment">
+                <begin><string>#</string></begin>
+                <end><regex>[\n\r]</regex></end>
+            </state>
         </default>
-        
-        <state id="Singleline Comment" color="#7F4C7F" font-style="italic">
-            <begin><string>#</string></begin>
-            <end><regex>[\n\r]</regex></end>
-        </state>
+
     </states>
 
 </syntax>

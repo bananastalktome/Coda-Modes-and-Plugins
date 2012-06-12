@@ -19,6 +19,7 @@
 	<key>TCMModeExtensions</key>
 	<array>
 	   <string>conf</string>
+	   <string>htaccess</string>
 	</array>
 </dict>
 </plist>
