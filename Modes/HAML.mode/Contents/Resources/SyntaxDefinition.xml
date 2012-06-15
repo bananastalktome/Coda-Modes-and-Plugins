@@ -12,21 +12,45 @@
 
     <states>
         <default id="Base" scope="meta.default">
-            <state id="HAML Comments" useforautocomplete="yes" type="comment" foldable="yes" scope="comment.block">
+            
+            <!--<import mode="HTML" keywords-only="yes" />-->
+            <state-link state="Ruby Interpolation" />
+            
+            <import mode="XML" keywords-only="yes"/>
+            
+            <!--<state id="Single HTML Tag" foldable="no" scope="markup.tag">
+                <begin>
+                    <regex>&lt;\s*[^/?!][-:_\w]*\s*(?:[-:_\w]+=(?:"[^"]*"|'[^']*'|\w+)\s*)*/\s*(?=>)</regex>
+                </begin>
+                <end>
+                    <regex>></regex>
+                </end>
+                <import mode="XML" keywords-only="yes"/>
+                <import mode="HTML" keywords-only="yes" />
+            </state>-->
+            <state id="HTML Tag State" foldable="yes" indent="yes" scope="meta.default" usespellchecking="yes" lineardirtymode="yes">
+                <begin>
+                    <regex>&lt;\s*(?'xmltagstatename'[^/?!][-:_\w]*)\s*(?:[-:_\w]+=(?:"[^"]*"|'[^']*'|\w+)\s*)*\s*>(?'cutoffstart'(?:.|[\n])*&lt;/\k'xmltagstatename')</regex>
+					<autoend>&lt;/\g&lt;xmltagstatename>></autoend>
+                </begin>
+                <end>
+                    <regex>&lt;\s*/\s*(?#see-insert-start-group:xmltagstatename)\s*></regex>
+                </end>
+                
+                <import mode="XML" keywords-only="yes"/>
+                <import mode="HTML"/>
+                <state-link state="Ruby Interpolation" />
+            </state>
+            
+            <state id="HAML Comments" useforautocomplete="no" type="comment" foldable="yes" scope="comment.block">
                 <begin><regex>^(?'commentspaces'[\ ]*)(?:-#|/)(?=.*$)</regex></begin>
                 <end><regex>[\r\n](?!(?#see-insert-start-group:commentspaces)[\ ]|[\ ]*$)</regex></end>
             </state>
 
-            <state id="HTML Element" useforautocomplete="no" scope="markup.tag">
-              <begin><regex>^\s*[%\.#](?=[\w_-])</regex></begin>
-              <end><regex>.(?=[&amp;={\[\s\r\n!])</regex></end>
+            <state id="HAML HTML Element" useforautocomplete="no" scope="markup.tag">
+                <begin><regex>^\s*[%\.#](?=[\w_-])</regex></begin>
+                <end><regex>.(?=[&amp;={\[\s\r\n!])</regex></end>
             </state>
-
-            <!--<state id="interpolated ruby" usespellchecking="yes" scope="style.value.keyword">
-                <begin><regex>(?&lt;===)(?:.)</regex></begin>
-                <end><regex>[\r\n]</regex></end>
-                <import mode="Ruby" state="String with double quotes"/>
-            </state>-->
 
             <state id="Inline Ruby" usesymbolsfrommode="Ruby" useautocompletefrommode="Ruby" scope="meta.default">
                 <begin><regex>(?:[&amp;!]?(?&lt;!=)=|-(?!#))(?=[\s\w@])</regex></begin>
